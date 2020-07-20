@@ -1,15 +1,15 @@
 import React from 'react';
-import { Container, Typography } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import { MenuInferior } from '../components';
 
 const Inicio = () => {
   return (
-    <Container maxWidth="sm">
+    <Grid container>
       <Typography role="h1" variant="h2">
         Início
       </Typography>
       <MenuInferior />
-    </Container>
+    </Grid>
   );
 };
 export default Inicio;
