@@ -23,6 +23,7 @@ Abra [http://localhost:3000](http://localhost:3000) para ver no browser.
 A página vai recarregar automaticamente se for editado.<br />
 
 ### `yarn test`
+Roda os testes configurados
 
 ### `yarn build`
 
