@@ -13,6 +13,9 @@
 
 Nesse diretório, é possível rodar os seguintes comandos
 
+### `yarn install`
+Instala as dependências listadas no `package.json`.
+
 ### `yarn start`
 Roda o app em mode de desenvolvimento.<br />
 Abra [http://localhost:3000](http://localhost:3000) para ver no browser.
