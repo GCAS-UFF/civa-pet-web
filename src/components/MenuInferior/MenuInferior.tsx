@@ -8,6 +8,8 @@ import {
   AccountBalanceWalletOutlined,
   AccountCircleOutlined,
 } from '@material-ui/icons';
+import { IMenuInferior } from './MenuInferior.interface';
+import { MenuTab } from './MenuTab.enum';
 
 const useStyles = makeStyles({
   root: {
@@ -17,15 +19,16 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleBottomNavigation() {
+function MenuInferior({ tab = MenuTab.INICIO }: IMenuInferior) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(tab);
 
   return (
     <BottomNavigation
       value={value}
       onChange={(event, newValue) => {
         setValue(newValue);
+        console.log(event);
       }}
       showLabels
       className={classes.root}
@@ -40,3 +43,5 @@ export default function SimpleBottomNavigation() {
     </BottomNavigation>
   );
 }
+
+export default MenuInferior;
