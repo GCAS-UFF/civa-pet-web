@@ -8,7 +8,7 @@ const Router = () => (
       <Route path="/busca">
         <Busca />
       </Route>
-      <Route path="/carteiras/">
+      <Route path="/carteiras">
         <Carteiras />
       </Route>
       <Route path="/perfil">
