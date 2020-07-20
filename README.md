@@ -27,6 +27,6 @@ Constrói o app para produção no diretório `build`.<br />
 
 ## Dependências
 - [Create React App](https://github.com/facebook/create-react-app)
-- [React](https://reactjs.org/)
+- [React](https://pt-br.reactjs.org/)
 - [React Router Dom](https://reactrouter.com/web/guides/quick-start)
-- [Material-UI](https://material-ui.com/)
+- [Material-UI](https://material-ui.com/pt/)
