@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
 import {
@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 function MenuInferior({ tab = MenuTab.INICIO }: IMenuInferior) {
   const history = useHistory();
   const classes = useStyles();
-  const [value, setValue] = React.useState(tab);
+  const [value, setValue] = useState(tab);
 
   return (
     <BottomNavigation
