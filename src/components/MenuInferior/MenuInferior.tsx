@@ -8,6 +8,7 @@ import {
   AccountBalanceWalletOutlined,
   AccountCircleOutlined,
 } from '@material-ui/icons';
+
 const useStyles = makeStyles({
   root: {
     width: '100%',
