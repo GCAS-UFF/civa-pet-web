@@ -1,10 +1,13 @@
 import React from 'react';
+import { Container, Typography } from '@material-ui/core';
 
 const Inicio = () => {
   return (
-    <div>
-      <h1>Inicio</h1>
-    </div>
+    <Container maxWidth="sm">
+      <Typography role="h1" variant="h2">
+        Início
+      </Typography>
+    </Container>
   );
 };
 export default Inicio;
