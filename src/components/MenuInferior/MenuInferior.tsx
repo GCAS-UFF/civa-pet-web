@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
 import {
   SearchOutlined,
   HomeOutlined,
@@ -10,6 +9,8 @@ import {
 } from '@material-ui/icons';
 import { IMenuInferior } from './MenuInferior.interface';
 import { MenuTab } from './MenuTab.enum';
+import { useHistory } from 'react-router-dom';
+import redirectURL from './redirectURL';
 
 const useStyles = makeStyles({
   root: {
@@ -20,15 +21,16 @@ const useStyles = makeStyles({
 });
 
 function MenuInferior({ tab = MenuTab.INICIO }: IMenuInferior) {
+  const history = useHistory();
   const classes = useStyles();
   const [value, setValue] = React.useState(tab);
 
   return (
     <BottomNavigation
       value={value}
-      onChange={(event, newValue) => {
+      onChange={(event, newValue: MenuTab) => {
         setValue(newValue);
-        console.log(event);
+        history.push(redirectURL(newValue));
       }}
       showLabels
       className={classes.root}
