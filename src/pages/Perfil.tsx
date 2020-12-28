@@ -1,7 +1,7 @@
 import React from 'react';
-import { MenuInferior } from '../components';
 import { Typography, Grid } from '@material-ui/core';
-import { MenuTab } from '../components/MenuInferior/MenuTab.enum';
+import { NavMenuTab } from '../components/BottomNavbar/NavMenuTab.enum';
+import BottomNavbar from '../components/BottomNavbar/BottomNavbar';
 
 const Perfil = () => {
   return (
@@ -9,7 +9,7 @@ const Perfil = () => {
       <Typography role="h1" variant="h2">
         Perfil
       </Typography>
-      <MenuInferior tab={MenuTab.PERFIL} />
+      <BottomNavbar tab={NavMenuTab.PROFILE} />
     </Grid>
   );
 };

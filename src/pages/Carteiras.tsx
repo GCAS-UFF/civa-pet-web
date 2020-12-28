@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
-import { MenuInferior } from '../components';
-import { MenuTab } from '../components/MenuInferior/MenuTab.enum';
+import BottomNavbar from '../components/BottomNavbar/BottomNavbar';
+import { NavMenuTab } from '../components/BottomNavbar/NavMenuTab.enum';
 
 const Carteiras = () => {
   return (
@@ -9,7 +9,7 @@ const Carteiras = () => {
       <Typography role="h1" variant="h2">
         Carteiras
       </Typography>
-      <MenuInferior tab={MenuTab.CARTEIRAS} />
+      <BottomNavbar tab={NavMenuTab.WALLETS} />
     </Grid>
   );
 };

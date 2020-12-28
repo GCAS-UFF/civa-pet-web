@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
-import { MenuInferior } from '../components';
-import { MenuTab } from '../components/MenuInferior/MenuTab.enum';
+import BottomNavbar from '../components/BottomNavbar/BottomNavbar';
+import { NavMenuTab } from '../components/BottomNavbar/NavMenuTab.enum';
 
 const Busca = () => {
   return (
@@ -9,7 +9,7 @@ const Busca = () => {
       <Typography role="h1" variant="h2">
         Busca
       </Typography>
-      <MenuInferior tab={MenuTab.BUSCA} />
+      <BottomNavbar tab={NavMenuTab.SEARCH} />
     </Grid>
   );
 };

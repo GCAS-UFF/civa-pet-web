@@ -1,17 +1,20 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Inicio, Busca, Carteiras, Perfil } from './pages';
+import Busca from './pages/Busca';
+import Carteiras from './pages/Carteiras';
+import Inicio from './pages/Inicio';
+import Perfil from './pages/Perfil';
 
 const Router = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/busca">
+      <Route path="/search">
         <Busca />
       </Route>
-      <Route path="/carteiras">
+      <Route path="/wallets">
         <Carteiras />
       </Route>
-      <Route path="/perfil">
+      <Route path="/profile">
         <Perfil />
       </Route>
       <Route path="/">
