@@ -7,10 +7,13 @@ import {
   AccountBalanceWalletOutlined,
   AccountCircleOutlined,
 } from '@material-ui/icons';
-import { IMenuInferior } from './MenuInferior.interface';
-import { MenuTab } from './MenuTab.enum';
 import { useHistory } from 'react-router-dom';
 import redirectURL from './redirectURL';
+import { NavMenuTab } from './NavMenuTab.enum';
+
+interface BottomNavbarProps {
+  tab?: NavMenuTab;
+}
 
 const useStyles = makeStyles({
   root: {
@@ -20,7 +23,7 @@ const useStyles = makeStyles({
   },
 });
 
-function MenuInferior({ tab = MenuTab.INICIO }: IMenuInferior) {
+function BottomNavbar({ tab = NavMenuTab.HOME }: BottomNavbarProps) {
   const history = useHistory();
   const classes = useStyles();
   const [value, setValue] = useState(tab);
@@ -28,7 +31,7 @@ function MenuInferior({ tab = MenuTab.INICIO }: IMenuInferior) {
   return (
     <BottomNavigation
       value={value}
-      onChange={(event, newValue: MenuTab) => {
+      onChange={(_, newValue: NavMenuTab) => {
         setValue(newValue);
         history.push(redirectURL(newValue));
       }}
@@ -46,4 +49,4 @@ function MenuInferior({ tab = MenuTab.INICIO }: IMenuInferior) {
   );
 }
 
-export default MenuInferior;
+export default BottomNavbar;
