@@ -3,15 +3,15 @@ import { Grid, Typography } from '@material-ui/core';
 import BottomNavbar from '../components/BottomNavbar/BottomNavbar';
 import { NavMenuTab } from '../components/BottomNavbar/NavMenuTab.enum';
 
-const Carteiras = () => {
+const Search = () => {
   return (
     <Grid container>
       <Typography role="h1" variant="h2">
-        Carteiras
+        Busca
       </Typography>
-      <BottomNavbar tab={NavMenuTab.WALLETS} />
+      <BottomNavbar tab={NavMenuTab.SEARCH} />
     </Grid>
   );
 };
 
-export default Carteiras;
+export default Search;

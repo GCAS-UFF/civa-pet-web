@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography, Grid } from '@material-ui/core';
 import BottomNavbar from '../components/BottomNavbar/BottomNavbar';
 
-const Inicio = () => {
+const Home = () => {
   return (
     <Grid container>
       <Typography role="h1" variant="h2">
@@ -12,4 +12,4 @@ const Inicio = () => {
     </Grid>
   );
 };
-export default Inicio;
+export default Home;

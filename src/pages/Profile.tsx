@@ -3,7 +3,7 @@ import { Typography, Grid } from '@material-ui/core';
 import { NavMenuTab } from '../components/BottomNavbar/NavMenuTab.enum';
 import BottomNavbar from '../components/BottomNavbar/BottomNavbar';
 
-const Perfil = () => {
+const Profile = () => {
   return (
     <Grid container>
       <Typography role="h1" variant="h2">
@@ -14,4 +14,4 @@ const Perfil = () => {
   );
 };
 
-export default Perfil;
+export default Profile;

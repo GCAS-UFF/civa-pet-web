@@ -1,24 +1,24 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Busca from './pages/Busca';
-import Carteiras from './pages/Carteiras';
-import Inicio from './pages/Inicio';
-import Perfil from './pages/Perfil';
+import Search from './pages/Search';
+import Wallets from './pages/Wallets';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
 
 const Router = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/search">
-        <Busca />
+        <Search />
       </Route>
       <Route path="/wallets">
-        <Carteiras />
+        <Wallets />
       </Route>
       <Route path="/profile">
-        <Perfil />
+        <Profile />
       </Route>
       <Route path="/">
-        <Inicio />
+        <Home />
       </Route>
     </Switch>
   </BrowserRouter>
