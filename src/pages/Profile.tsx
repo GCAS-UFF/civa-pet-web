@@ -6,7 +6,7 @@ import BottomNavbar from '../components/BottomNavbar/BottomNavbar';
 const Profile = () => {
   return (
     <Grid container>
-      <Typography role="h1" variant="h2">
+      <Typography role="h1" variant="h4">
         Perfil
       </Typography>
       <BottomNavbar tab={NavMenuTab.PROFILE} />
