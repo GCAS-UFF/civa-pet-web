@@ -6,7 +6,7 @@ import { NavMenuTab } from '../components/BottomNavbar/NavMenuTab.enum';
 const Wallets = () => {
   return (
     <Grid container>
-      <Typography role="h1" variant="h2">
+      <Typography role="h1" variant="h4">
         Carteiras
       </Typography>
       <BottomNavbar tab={NavMenuTab.WALLETS} />

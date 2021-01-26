@@ -5,7 +5,7 @@ import BottomNavbar from '../components/BottomNavbar/BottomNavbar';
 const Home = () => {
   return (
     <Grid container>
-      <Typography role="h1" variant="h2">
+      <Typography role="h1" variant="h4">
         Início
       </Typography>
       <BottomNavbar />
