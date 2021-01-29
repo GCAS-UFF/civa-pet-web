@@ -1,6 +1,7 @@
 # CIVA - Carteira de Vacinação Inteligente
 
-## Motivação
+## Protótipo de Telas
+Disponível no [Figma](https://www.figma.com/file/ZoTyvrxNu709gqlSXv23Vu/CIVA-Prot%C3%B3tipo-Copy?node-id=0%3A1)
 
 ## Como rodar o ambiente?
 
