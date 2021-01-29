@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Grid } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import { NavMenuTab } from '../components/BottomNavbar/NavMenuTab.enum';
 import BottomNavbar from '../components/BottomNavbar/BottomNavbar';
 
