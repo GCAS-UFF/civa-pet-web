@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import BottomNavbar from '../components/BottomNavbar/BottomNavbar';
 import { NavMenuTab } from '../components/BottomNavbar/NavMenuTab.enum';
-import ItemPet from '../components/ItemPet/ItemPet';
+import { ItemPetList } from '../components/ItemPetList/ItemPetListProps';
 
 const Wallets = () => {
   return (
@@ -10,14 +10,7 @@ const Wallets = () => {
       <Typography role="h1" variant="h2">
         Carteiras
       </Typography>
-      <Grid container xs={12}>
-        <Grid item xs={12}>
-          <ItemPet name="Maria Flor" />
-        </Grid>
-        <Grid item xs={12}>
-          <ItemPet name="Pepe" />
-        </Grid>
-      </Grid>
+      <ItemPetList data={['Pepe', 'Maria Flor', 'Claire', 'Meg', 'Muffin']} />
       <BottomNavbar tab={NavMenuTab.WALLETS} />
     </Grid>
   );
