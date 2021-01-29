@@ -1,14 +1,14 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import { NavMenuTab } from '../components/BottomNavbar/NavMenuTab.enum';
 import BottomNavbar from '../components/BottomNavbar/BottomNavbar';
-import ItemPet from '../components/ItemPet/ItemPet';
 
 const Profile = () => {
   return (
-    <Grid container direction="column">
-      <ItemPet />
-      <ItemPet />
+    <Grid container>
+      <Typography role="h1" variant="h4">
+        Perfil
+      </Typography>
       <BottomNavbar tab={NavMenuTab.PROFILE} />
     </Grid>
   );
