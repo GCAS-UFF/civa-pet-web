@@ -2,9 +2,6 @@
 
 ## Motivação
 
-## Integrantes
-- [João Marcos](https://github.com/j0a0m4/)
-
 ## Como rodar o ambiente?
 
 É necessário a instalação do [Yarn](https://classic.yarnpkg.com/pt-BR/docs/getting-started), que vai gerenciar as dependências e os scripts de execução.
