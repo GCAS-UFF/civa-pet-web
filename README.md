@@ -1,9 +1,7 @@
 # CIVA - Carteira de Vacinação Inteligente
 
-## Motivação
-
-## Integrantes
-- [João Marcos](https://github.com/j0a0m4/)
+## Protótipo de Telas
+Disponível no [Figma](https://www.figma.com/file/ZoTyvrxNu709gqlSXv23Vu/CIVA-Prot%C3%B3tipo-Copy?node-id=0%3A1)
 
 ## Como rodar o ambiente?
 
