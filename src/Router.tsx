@@ -4,6 +4,7 @@ import Search from './pages/Search';
 import Wallets from './pages/Wallets';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
+import Form from './pages/Form';
 
 const Router = () => (
   <BrowserRouter>
@@ -16,6 +17,9 @@ const Router = () => (
       </Route>
       <Route path="/profile">
         <Profile />
+      </Route>
+      <Route path="/form">
+        <Form />
       </Route>
       <Route path="/">
         <Home />
