@@ -36,7 +36,14 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: '#FBEEFF',
     },
     btn: {
-      textAlign: 'center',
+      borderRadius: '60px',
+      backgroundColor: '#9378FF',
+      color: '#FFF',
+      height: '41px',
+      width: '191px',
+      '&:hover': {
+        background: '#6145ff',
+      },
     },
   })
 );
@@ -121,7 +128,9 @@ function ApplicationForm() {
           </FormControl>
         </FormControl>
         <Grid container xs={12} justify="center">
-          <Button type="submit">Enviar</Button>
+          <Button type="submit" className={classes.btn}>
+            Salvar
+          </Button>
         </Grid>
       </form>
     </Grid>
