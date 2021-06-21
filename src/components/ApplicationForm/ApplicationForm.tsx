@@ -16,8 +16,7 @@ interface ApplicationFormProps {
   name: string;
 }
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
+const useStyles = makeStyles((theme: Theme) => createStyles ({
     root: {
       width: '100%',
       padding: theme.spacing(1),
@@ -65,9 +64,8 @@ function ApplicationForm() {
       </Grid>
       <form
         className={classes.form}
-        noValidate
-        onSubmit={handleSubmit(data =>
-          alert(JSON.stringify({ vaccine: data }))
+        onSubmit={handleSubmit(vaccine =>
+          console.log(JSON.stringify({vaccine}))
         )}
       >
         <FormControl fullWidth>
