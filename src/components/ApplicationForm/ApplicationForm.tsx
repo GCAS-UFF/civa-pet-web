@@ -1,5 +1,4 @@
-import React from 'react';
-//import Grid from '@material-ui/core/Grid';
+import React, {useState} from 'react';
 import {
   Grid,
   FormControl,
@@ -11,10 +10,10 @@ import Typography from '@material-ui/core/Typography';
 import ArrowIcon from '@material-ui/icons/ArrowBack';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { useForm } from 'react-hook-form';
-
-interface ApplicationFormProps {
-  name: string;
-}
+import { KeyboardDatePicker, MuiPickersUtilsProvider  } from "@material-ui/pickers";
+import DateFnsUtils from '@date-io/moment';
+import "moment/locale/pt-br";
+import { Moment } from 'moment';
 
 const useStyles = makeStyles((theme: Theme) => createStyles ({
     root: {
@@ -48,12 +47,16 @@ const useStyles = makeStyles((theme: Theme) => createStyles ({
 );
 
 function ApplicationForm() {
+
   const classes = useStyles();
+
   const { register, handleSubmit } = useForm();
-  console.log(register);
+
+  const [selectedDate, handleDateChange] = useState<Date | null | Moment>(null); 
+
   return (
     <Grid className={classes.root}>
-      <Grid container direction={'row'} xs={12} sm={6} md={9}>
+      <Grid container direction={'row'}>
         <ArrowIcon color="action" />
         <Typography>Voltar</Typography>
       </Grid>
@@ -65,7 +68,7 @@ function ApplicationForm() {
       <form
         className={classes.form}
         onSubmit={handleSubmit(vaccine =>
-          console.log(JSON.stringify({vaccine}))
+          alert(JSON.stringify({vaccine}))
         )}
       >
         <FormControl fullWidth>
@@ -78,6 +81,7 @@ function ApplicationForm() {
               style={{ marginBottom: 10 }}
               inputRef={register}
               name="name"
+              required
             />
           </FormControl>
           <FormControl variant="outlined">
@@ -89,18 +93,26 @@ function ApplicationForm() {
               style={{ marginBottom: 10 }}
               inputRef={register}
               name="company"
+              required
             />
           </FormControl>
-          <FormControl variant="outlined">
-            <InputLabel htmlFor="component-outlined">Vencimento</InputLabel>
-            <OutlinedInput
-              className={classes.colorInput}
-              id="component-outlined"
-              label="Vencimento"
-              style={{ marginBottom: 10 }}
-              inputRef={register}
-              name="expirationDate"
-            />
+          <FormControl variant="outlined">            
+            <MuiPickersUtilsProvider locale="pt-br" utils={DateFnsUtils}>
+              <KeyboardDatePicker
+                variant='inline'
+                inputVariant="outlined"
+                label="Vencimento"   
+                className={classes.colorInput}    
+                value={selectedDate}
+                format="DD/MM/YYYY"
+                style={{ marginBottom: 10 }}
+                onChange={date => handleDateChange(date)}    
+                name="expirationDate"                         
+                autoOk
+                clearable
+                required            
+              />
+            </MuiPickersUtilsProvider>
           </FormControl>
           <FormControl variant="outlined">
             <InputLabel htmlFor="component-outlined">Partida</InputLabel>
@@ -111,6 +123,7 @@ function ApplicationForm() {
               style={{ marginBottom: 10 }}
               inputRef={register}
               name="batch"
+              required
             />
           </FormControl>
           <FormControl variant="outlined">
@@ -122,10 +135,11 @@ function ApplicationForm() {
               style={{ marginBottom: 10 }}
               inputRef={register}
               name="petWeight"
+              required
             />
           </FormControl>
         </FormControl>
-        <Grid container xs={12} justify="center">
+        <Grid container justify="center">
           <Button type="submit" className={classes.btn}>
             Salvar
           </Button>
