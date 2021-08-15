@@ -108,8 +108,7 @@ function ApplicationForm() {
                 style={{ marginBottom: 10 }}
                 onChange={date => handleDateChange(date)}    
                 name="expirationDate"                         
-                autoOk
-                clearable
+                autoOk                
                 required            
               />
             </MuiPickersUtilsProvider>
@@ -140,7 +139,7 @@ function ApplicationForm() {
           </FormControl>
         </FormControl>
         <Grid container justify="center">
-          <Button type="submit" className={classes.btn}>
+          <Button type="submit" id="submit-button" className={classes.btn}>
             Salvar
           </Button>
         </Grid>
